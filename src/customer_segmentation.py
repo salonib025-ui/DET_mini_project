@@ -22,6 +22,8 @@ customer_data = df.groupby('CustomerID').agg({
 }).reset_index()
 
 customer_data.columns = ['CustomerID', 'TotalSpending', 'Transactions', 'TotalItems']
+print(customer_data.head())
+print(customer_data.columns)
 
 # Feature scaling
 X = customer_data[['TotalSpending', 'Transactions', 'TotalItems']]
